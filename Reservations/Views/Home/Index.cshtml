@@ -8,18 +8,23 @@
     <h1 class="display-4">Welcome</h1>
 
     <form asp-action="Login" method="post">
-        <div>
+        <div style="text-align: center;">
             <label asp-for="Email"></label>
             <input asp-for="Email" />
             <span asp-validation-for="Email"></span>
         </div>
-        <div>
+        <div style="height: 10px;"></div>
+        <div style="text-align: center;">
             <label asp-for="Password"></label>
             <input asp-for="Password" type="password" />
             <span asp-validation-for="Password"></span>
         </div>
+        <div style="height: 10px;"></div>
         <button type="submit">Login</button>
-    </form>
 
-    <a asp-controller="User" asp-action="Create">Create User</a>
+    </form>
+    <div style="height: 10px;"></div>
+    <form asp-controller="Users" asp-action="Create" method="get">
+        <button type="submit">Create User</button>
+    </form>
 </div>
